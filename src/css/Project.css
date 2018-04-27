@@ -1,0 +1,227 @@
+.projectsPage {
+  display: flex;
+  min-height: 80vh;
+  position: relative;
+}
+
+.projHead {
+  padding-left: 12.8rem;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 38vw;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  z-index: 10;
+}
+
+.projHead h1 {
+  font-size: 7rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,.20);
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.projBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/wideOcean.png);
+  background-size: 200%;
+  background-position: center center;
+  filter: saturate(50%);
+  opacity: .7;
+  background-repeat: no-repeat;
+}
+
+.projAside {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  flex-grow: 1;
+}
+.projAside > div {
+  position: relative;
+  top: 50%;
+  transform: translateX(1.23rem);
+  transition: all .5s ease-out;
+  opacity: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.projAside p {
+  color: white;
+  position: relative;
+  z-index: 100;
+  margin: 1.23rem;
+  font-size: 1.23em;
+  letter-spacing: .5px;
+  line-height: 1.5;
+  max-width: 38%;
+}
+
+.projAside__cover {
+  position: absolute;
+  left: 0;
+  background: #FF3333;
+  width: 400%;
+  height: 100%;
+  z-index: 10;
+  bottom: 0;
+}
+
+.projSection {
+  display: flex;
+  position: relative;
+  padding: 9.2vw;
+}
+
+.projDescWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+
+.projDesc {
+  max-width: 62%;
+}
+
+.projPicture {
+  background-size: 138%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: saturate(50%);
+  opacity: .7;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+.projPicture.mike {
+  background-image: url(../assets/project_mike.png);
+  width: 38vw;
+  height: 76vw;
+}
+
+.projPicture.thecure {
+  background-image: url(../assets/oceanMike.png);
+  width: 62vw;
+  height: 31vw;
+}
+
+.projPicture:hover {
+  opacity: 1;
+  filter: saturate(100%);
+  transition: all .2s ease-out;
+}
+
+.projTitleWrap {
+  position: absolute;
+}
+
+.projTitleWrap.mike {
+  left: 0;
+  top: 19%;
+}
+
+.projTitleWrap.thecure {
+  right: 0;
+  top: 9.2%;
+}
+
+.projTitleWrap h3 {
+  font-size: 2.23rem;
+  line-height: 1.1;
+  letter-spacing: .5px;
+  position: relative;
+  z-index: 100;
+  background: #FF3333;
+  padding: 1rem 1.62rem; 
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-shadow: 0 1px 2px rgba(0,0,0,.20);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.projTitleWrap.mike h3 {
+  left: -50%; 
+}
+
+.projTitleWrap.thecure h3 {
+  right: -50%;
+}
+
+.projDesc p {
+  font-size: 1.23em;
+  letter-spacing: .5px;
+  line-height: 1.5;
+  color: rgba(0,0,0,.85);
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .projectsPage {
+    flex-direction: column;
+  }
+  .projHead {
+    padding-left: 0;
+    min-width: 0;
+    text-align: center;
+    align-items: flex-end;
+    height: 62vh;
+  }
+  .projHead h1 {
+    width: 100%;
+  }
+  .projAside {
+    align-items: flex-end;
+  }
+  .projAside p {
+    max-width: 62%;
+  }
+  .projAside > div {
+    margin-left: 38vw;
+  }
+  /*need to change after make web photos*/
+  .projBack {
+    background-size: 450%;
+  }
+  .projSection {
+    flex-direction: column;
+    padding: 4.8rem 9.2vw;
+  }
+  .projSection:first-of-type {
+    margin-top: 22.4vw;
+  }
+  .projSection:nth-of-type(2) {
+    flex-direction: column-reverse;
+  }
+  .projDescWrap {
+    position: static;
+    justify-content: flex-start
+  }
+  .mike.projDescWrap {
+    justify-content: flex-end;
+  }
+  .projDesc {
+    max-width: 62vw;
+  }
+  .projDesc p {
+    margin-top: 3.32rem;
+  }
+  .projPicture.thecure {
+    width: 100%;
+  }
+  .projTitleWrap.mike {
+    left: 38vw;
+    top: 36vw;
+  }
+  .projTitleWrap.mike h3 {
+    left: 0;
+  }
+  .projTitleWrap.thecure h3 {
+    right: 0;
+  }
+}

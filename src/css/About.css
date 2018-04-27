@@ -1,0 +1,264 @@
+.about {
+  display: flex;
+  min-height: 90vh;
+  position: relative;
+}
+
+.staffHeader {
+  padding-left: 10%;
+  font-size: .92rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  margin-top: 3.32rem;
+}
+
+.abtHead, .abtAside {
+  flex-grow: 1;
+}
+
+.profile p, .abtAside p {
+  font-size: 1.23em;
+  letter-spacing: .35px;
+  line-height: 1.5;
+  color: rgba(70,70,70,.8);
+  margin-top: 1.23rem;
+}
+
+.abtHead {
+  padding-left: 12.8rem;
+  display: flex;
+  min-width: 38vw;
+  align-items: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  z-index: 10;
+}
+
+.abtHead h1 {
+  font-size: 7rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,.20);
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.abtAside {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.abtAside p {
+  color: white;
+  position: relative;
+  z-index: 100;
+  margin: 1.23rem;
+}
+
+.abtAside div {
+  max-width: 38%;
+  position: relative;
+  bottom: -9.2rem;
+  left: 2.23rem;
+  opacity: 0;
+  transition: all .5s ease-out;
+  transform: translateY(1.23rem);
+  text-shadow: 0 1px 2px rgba(0,0,0,.20);
+  color: white;
+}
+
+.abtAside__cover {
+  position: absolute;
+  left: 0;
+  background: #FF3333;
+  width: 100%;
+  z-index: 10;
+  bottom: -300%;
+  height: 400%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.abtHead__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/josh_mike.jpg);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  background-size: 100%;
+  background-position: center center;
+  filter: saturate(50%);
+  opacity: .7;
+  background-repeat: no-repeat;
+}
+
+.profile h3 {
+  font-size: 2.8rem;
+  margin-bottom: 1.23rem;
+  margin-top: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.profile i {
+  margin-left: 1.23rem;
+}
+
+.abtCnt {
+  background: #FF3333;
+  padding: 6.2rem 0rem;
+}
+
+.abtCnt div[aria-label="phone"] {
+  color: white;
+}
+
+.abtFoot {
+  background: #FF3333;
+}
+
+.abtFoot .copy, .abtFoot .careers {
+  color: white;
+}
+
+.abtCnt h3 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.abtContact img {
+  left: -10%;
+  position: relative;
+  width: 120%;
+  bottom: -1.23rem;
+}
+
+.contact__itemW.contact__item a {
+  color: white;
+}
+
+.abtInfo {
+  border-right: 4px solid white;
+  color: white;
+}
+
+.byeW p {
+  color: white;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.32rem 0rem;
+}
+
+.profile {
+  max-width: 80%;
+  display: flex;
+  position: relative;
+  margin: 3.32rem 0rem;
+}
+
+.profile__pic {
+  flex-grow: 1;
+  max-width: 50%;
+  z-index: 100;
+}
+
+.profile__pic img {
+  max-width: 100%;
+}
+
+.profile__desc {
+  flex-grow: 1;
+  padding: 0rem 2.23rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__desc > div {
+  max-width: 65%;
+}
+
+
+
+/* Phones */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .about {
+    flex-direction: column;
+  }
+  .abtHead {
+    min-width: 0;
+    padding-left: 9.2vw;
+  }
+  .staffHeader {
+    padding-right: 9.2vw;
+    text-align: right;
+  }
+  .abtInfo {
+    border-right: 6px solid white;
+  }
+  .abtAside {
+    align-items: start;
+    overflow: initial;
+  }
+  .abtAside div {
+    max-width: 62%;
+    bottom: 0;
+    left: 0;
+  }
+  .abtHead__back {
+    background-size: 300%;
+  }
+  .profile {
+    max-width: 90%;
+    flex-direction: column;
+  }
+  .profile.rev {
+    flex-direction: column-reverse;
+  }
+  .profile__pic {
+    max-width: 100%;
+  }
+  .profile__desc {
+    padding: 2.23rem 0rem 0rem 0rem;
+  }
+  .profile__desc > div {
+    max-width: 100%;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .abtHead__back {
+    background-size: 200%;
+  }
+  .abtAside__cover {
+    bottom: -300%;
+    height: 400%;
+  }
+  .staffHeader {
+    padding-left: 5%;
+  }
+  .abtAside div {
+    max-width: 62%;
+  }
+  .profile {
+    max-width: 90%;
+  }
+}
+
+@media only screen  and (min-width : 1824px) {
+  .staffHeader {
+    padding-left: 16.2vw;
+  }
+  .person {
+    padding: 3.32rem 16.2vw;
+  }
+}
