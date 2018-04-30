@@ -351,7 +351,7 @@ span.activePos {
 
 .projects {
   display: flex;
-  padding: 4rem 9.2vw 0rem 9.2vw;
+  padding: 6rem 9.2vw 0rem 9.2vw;
 }
 
 .projects p {
@@ -606,7 +606,7 @@ a.activeLink::after {
     max-width: 100%;
   }
   .sexy__title h1 {
-    margin-top: 10rem;
+    margin-top: 20rem;
   }
   .abt, .projects {
     padding: 8rem 2.5rem 0rem 2.5rem;
@@ -670,18 +670,24 @@ a.activeLink::after {
   .brand img {
     margin: 0;
   }
-
+  .sexy__title {
+    margin-bottom: 8rem;
+  }
+  .sexy__title h1 {
+    margin-top: 25rem;
+  }
   .abt {
     flex-direction: column;
   }
   .projects {
     flex-direction: column-reverse;
   }
-  .abt__img, .projImg {
-    justify-content: center;
+  .projText, .abt__text {
+    padding-left: 1rem;
   }
   .abt__img img, .projImg img {
     width: 62vw;
+    max-height: 20rem;
   }
   .abt__text p, .projects p {
     margin-top: 0;
@@ -727,13 +733,15 @@ a.activeLink::after {
     padding-top: 8rem;
   }
   
-  .projImg img {
+  /* .projImg img {
     max-width: 138%;
+  } */
+  .abt__img img, .projImg img {
+    max-height: 14rem;
   }
   .sexy__title h1 {
     max-width: 100%;
     font-size: 5em;
-    margin-top: 20rem;
   }
   .sexy__title > div {
     padding-left: 9.2vw;
@@ -790,9 +798,6 @@ a.activeLink::after {
     padding: 8rem 1.5rem 0rem 1.5rem;
   }
   .abt__img, .projImg {
-    justify-content: flex-start;
-  }
-  .projText, .abt__text {
-    padding-left: 1rem;
+    max-height: 11rem;
   }
 }
