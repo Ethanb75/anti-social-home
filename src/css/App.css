@@ -403,7 +403,7 @@ span.activePos {
   
 }
 .quoteSlider {
-  padding: 22rem 0rem 5rem 0rem;
+  padding: 22rem 0rem 8rem 0rem;
 }
 
 .testimonials__quotes {
@@ -696,7 +696,10 @@ a.activeLink::after {
     margin-top: 2.23rem;
   }
   .testimonials__header h2 {
-    font-size: 2.5em;
+    font-size: 3em;
+  }
+  .quoteSlider > i {
+    font-size: 4em;
   }
   .quote {
     padding-right: 2em;
@@ -764,6 +767,9 @@ a.activeLink::after {
   }
   .quoteSlider {
     padding: 0;
+  }
+  .quoteSlider > i {
+    font-size: 2.5em;
   }
   .infoWrap {
     flex-direction: column;

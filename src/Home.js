@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // import files
-import mac from './assets/mac3.svg';
+import mac from './assets/life.svg';
 import laptopPhone from './assets/phone_lap.svg'
 
 

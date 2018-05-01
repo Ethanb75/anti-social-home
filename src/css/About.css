@@ -1,11 +1,13 @@
 .about {
   display: flex;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   position: relative;
 }
-
+.links {
+  max-width: initial;
+}
 .staffHeader {
-  padding-left: 10%;
+  padding-left: 9.2vw;
   font-size: .92rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -22,8 +24,9 @@
   font-size: 1.23em;
   letter-spacing: .35px;
   line-height: 1.5;
-  color: rgba(70,70,70,.8);
+  color: rgb(70,70,70);
   margin-top: 1.23rem;
+  margin-bottom: 0;
 }
 
 .abtHead {
@@ -40,6 +43,8 @@
   text-shadow: 0 1px 2px rgba(0,0,0,.20);
   color: white;
   font-family: 'Montserrat Alternates', sans-serif;
+  margin-top: 25rem;
+  margin-bottom: 20rem;
 }
 
 .abtAside {
@@ -60,7 +65,7 @@
   max-width: 38%;
   position: relative;
   bottom: -9.2rem;
-  left: 2.23rem;
+  left: 5rem;
   opacity: 0;
   transition: all .5s ease-out;
   transform: translateY(1.23rem);
@@ -101,6 +106,10 @@
   margin-bottom: 1.23rem;
   margin-top: 0;
   font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.profile span {
+  color: rgba(70,70,70,.75);
 }
 
 .profile i {
@@ -154,13 +163,13 @@
   flex-direction: column;
   align-items: center;
   margin: 3.32rem 0rem;
+  padding: 0 9.2vw;
 }
 
 .profile {
-  max-width: 80%;
   display: flex;
   position: relative;
-  margin: 3.32rem 0rem;
+  margin: 1.5rem 0rem;
 }
 
 .profile__pic {
@@ -170,37 +179,139 @@
 }
 
 .profile__pic img {
-  max-width: 100%;
+  width: 34rem;
 }
-
+.profile .profile__pic img {
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.profile.rev .profile__pic img {
+  -webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+}
 .profile__desc {
   flex-grow: 1;
-  padding: 0rem 2.23rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 6rem;
 }
-
-.profile__desc > div {
+.profile.rev .profile__desc {
+  padding: 0 6rem 0rem 0rem;
+}
+/* .profile__desc > div {
   max-width: 65%;
+} */
+
+
+@media only screen and (max-width: 1366px) {
+  .profile p, .abtAside p {
+    font-size: 1em;
+  }
+  .abtHead {
+    padding-left: 9.2vw;
+  }
+  .abtHead h1 {
+    margin-top: 20rem;
+    margin-bottom: 15rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .profiles {
+    padding: 0 5vw;
+  }
+  .profile__pic img {
+    width: 25rem;
+  }
+  .profile__desc {
+    padding-left: 4rem;
+  }
+  .profile.rev .profile__desc {
+    padding-right: 4rem;
+  }
 }
 
+@media only screen and (max-width: 800px) {
+  .abtAside div {
+    bottom: -15rem;
+  }
+  .profile {
+    margin: 2.5rem 0rem;
+  }
+  .profile__pic img {
+    width: 20rem;
+  }
+  .profile__desc {
+    padding-left: 3rem;
+  }
+  .profile.rev .profile__desc {
+    padding-right: 3rem;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  .abtHead__back {
+    background-size: 200%;
+  }
+  .abtAside div {
+    max-width: 62%;
+  }
+  .staffHeader {
+    padding-left: 5vw;
+  }
+  .profile {
+    /* max-width: 90%; */
+    flex-direction: column;
+  }
+  .profile.rev {
+    flex-direction: column-reverse;
+  }
+  .profile__pic {
+    max-width: 100%;
+  }
+  .profile.rev .profile__pic img, .profile .profile__pic img {
+    width: 100%;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 85% 82%, 89% 100%, 68% 82%, 0 82%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 85% 82%, 89% 100%, 68% 82%, 0 82%);
+  }
+  .profile__desc, .profile.rev .profile__desc {
+    padding: 0;
+    margin-top: -2.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about {
+    flex-direction: column;
+  }
+  .staffHeader {
+    padding-right: 5vw;
+    text-align: right;
+  }
+  .abtHead h1 {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+  }
+  .profile__desc, .profile.rev .profile__desc {
+    margin-top: -2rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .profile__desc, .profile.rev .profile__desc {
+    margin-top: -1rem;
+  }
+}
 
 /* Phones */
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .about {
-    flex-direction: column;
-  }
+  
   .abtHead {
     min-width: 0;
     padding-left: 9.2vw;
   }
-  .staffHeader {
-    padding-right: 9.2vw;
-    text-align: right;
-  }
+  
   .abtInfo {
     border-right: 6px solid white;
   }
@@ -216,18 +327,8 @@
   .abtHead__back {
     background-size: 300%;
   }
-  .profile {
-    max-width: 90%;
-    flex-direction: column;
-  }
-  .profile.rev {
-    flex-direction: column-reverse;
-  }
-  .profile__pic {
-    max-width: 100%;
-  }
   .profile__desc {
-    padding: 2.23rem 0rem 0rem 0rem;
+    /* padding: 2.23rem 0rem 0rem 0rem; */
   }
   .profile__desc > div {
     max-width: 100%;
@@ -243,22 +344,13 @@
     bottom: -300%;
     height: 400%;
   }
-  .staffHeader {
-    padding-left: 5%;
-  }
-  .abtAside div {
-    max-width: 62%;
-  }
   .profile {
     max-width: 90%;
   }
 }
 
-@media only screen  and (min-width : 1824px) {
+/* @media only screen  and (min-width : 1824px) {
   .staffHeader {
     padding-left: 16.2vw;
   }
-  .person {
-    padding: 3.32rem 16.2vw;
-  }
-}
+} */
